@@ -21,9 +21,13 @@ export class UsersService {
     return await this.userModel.find().lean();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  async findByID(id: string): Promise<any> {
+    return await this.userModel.findOne({ id }).lean();
   }
+  async findByEmail(email: string): Promise<any> {
+    return await this.userModel.findOne((user) => user.email === email).lean();
+  }
+
   async create(createUserDto: CreateUserDto) {
     const { name, email, password, isVendor } = createUserDto;
 
