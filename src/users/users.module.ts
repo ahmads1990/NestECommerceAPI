@@ -20,5 +20,6 @@ import { CartItem, CartItemSchema } from './schemas/cartItem.schema';
   ],
   controllers: [UsersController],
   providers: [UsersService],
+  exports: [UsersService],
 })
 export class UsersModule {}
