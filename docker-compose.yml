@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: dockerFile
+
+    container_name: web
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongo
+    # environment:
+    #   - MONGO_URI=mongodb://mongo:27017/nest
+    volumes:
+      - .:/usr/src/app
+    command: npm run start:dev
+
+  mongo:
+    image: mongo
+    container_name: mongonestjs
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodbdata:/data/db
+
+volumes:
+  mongodbdata:
