@@ -6,4 +6,15 @@ Simple nestJS api to add users vendors/customers and products and allows custome
 
 - Added validation
 - Added docker
-- Didn't implement some endpoints
+- Added JWT
+
+## Technologies
+
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=ts,nest,postman,git,github" />
+</a>
+
+### Outline [🔼](#table-of-contents)
+
+For better quality check the file ["Projectmap-NestJS.jpg"](Projectmap-NestJS.jpg)
+![Project Outline](Projectmap-NestJS.jpg)
