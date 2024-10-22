@@ -4,7 +4,7 @@ import { Types } from 'mongoose';
 @Schema()
 export class CartItem {
   @Prop({ type: Types.ObjectId, required: true })
-  productId: Types.ObjectId;
+  productId: string;
 
   @Prop({ required: true })
   productName: string;
